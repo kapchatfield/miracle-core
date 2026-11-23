@@ -1,0 +1,115 @@
+<!doctype html>
+<!--
+  Vox archival style: script + Higgsfield pictures + Higgsfield voice.
+  Script (Higgsfield seed_audio, preset voice "Arthur"):
+    "In 1526, William Tyndale printed the New Testament in English. Smuggled into England in bales of cloth,
+     it reached the plowboy. It cost him his life."
+  Phrase times (seconds, from the voice's pauses): 0.19 "In 1526" | 1.94 "William Tyndale" | 3.17 "printed the New
+  Testament in English" | 5.91 "Smuggled into England in bales of cloth" | 8.73 "it reached the plowboy" | 10.70 "It cost him his life."
+  1920x1080, 12.8s, 30fps. No network, randomness or clock in the page.
+-->
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=1920, height=1080">
+<script src="assets/gsap.min.js"></script>
+<style>
+@font-face{font-family:'Serif';src:url(assets/Fraunces.ttf) format('truetype');}
+@font-face{font-family:'Sans';src:url(assets/Helvetica-Bold.ttf) format('truetype');}
+@font-face{font-family:'Mono';src:url(assets/Mono.ttf) format('truetype');}
+:root{--paper:#EFE5CF;--ink:#1E1A16;--brown:#6B5A45;--red:#B3261E;--cream:#FFF7DE}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#000}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;background:#000}
+.layer{position:absolute;inset:0;overflow:hidden}
+.paperbg{position:absolute;inset:0;background:radial-gradient(ellipse at 30% 40%,rgba(255,250,235,.6),transparent 60%),radial-gradient(ellipse at 75% 70%,rgba(160,130,90,.2),transparent 55%),var(--paper)}
+.grain{position:absolute;inset:0;opacity:.38;mix-blend-mode:multiply}
+.vig{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,transparent 55%,rgba(60,40,20,.38) 100%)}
+.stamp{position:absolute;padding:12px 26px;border:6px solid var(--red);color:var(--red);font:700 64px 'Mono';letter-spacing:8px;transform:rotate(-6deg);opacity:0;background:rgba(239,229,207,.6)}
+.stamp::after{content:"";position:absolute;inset:5px;border:2px solid var(--red)}
+.cut{position:absolute;filter:sepia(.3) contrast(1.05) drop-shadow(0 16px 20px rgba(50,30,10,.3));opacity:0}
+.tag{position:absolute;background:var(--cream);padding:10px 18px;font:700 26px 'Mono';letter-spacing:3px;color:var(--ink);box-shadow:0 6px 12px rgba(0,0,0,.15);opacity:0}
+/* scene A: Tyndale */
+#stampA{left:150px;top:130px}
+#tyndale{left:1080px;top:110px;width:760px}
+#tagA{left:1230px;top:930px;transform:rotate(-2deg)}
+#headA{position:absolute;left:150px;top:380px;width:900px;font:600 104px/1.04 'Serif';color:var(--ink);letter-spacing:-2px}
+#headA span{display:inline-block;opacity:0}
+#kw{position:relative}
+#markA{position:absolute;left:0;top:0;overflow:visible}
+/* scene B: the dock */
+#dock{position:absolute;left:-60px;top:-34px;width:2040px;height:1148px;object-fit:cover;filter:grayscale(1) contrast(1.08) brightness(.9);transform-origin:40% 70%}
+#shadeB{position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.7) 0%,transparent 45%)}
+#labelB{position:absolute;left:120px;top:880px;font:700 44px 'Mono';letter-spacing:6px;color:#F6EEDC;opacity:0}
+#labelB b{color:#fff;background:var(--red);padding:2px 12px;font-weight:700}
+/* scene C: the plowboy */
+#plowboy{left:980px;top:120px;width:800px}
+#headC{position:absolute;left:150px;top:330px;width:820px;font:600 112px/1.02 'Serif';color:var(--ink);letter-spacing:-2px}
+#headC span{display:inline-block;opacity:0}
+#tagC{left:156px;top:640px;transform:rotate(-2deg)}
+/* scene D: the cost */
+#D{background:#0d0b09}
+#lineD{position:absolute;left:0;right:0;top:420px;text-align:center;font:600 120px 'Serif';color:#F6EEDC;letter-spacing:-2px}
+#lineD span{display:inline-block;opacity:0}
+#stampD{left:820px;top:640px;background:transparent}
+</style></head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="12.8" data-width="1920" data-height="1080" data-fps="30">
+ <div class="layer clip" id="A" data-start="0" data-duration="12.8" data-track-index="0">
+  <div class="paperbg"></div>
+  <svg class="grain" width="1920" height="1080"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".7" numOctaves="4" seed="7"/><feColorMatrix values="0 0 0 0 .35  0 0 0 0 .27  0 0 0 0 .18  0 0 0 .9 0"/></filter><rect width="1920" height="1080" filter="url(#n)"/></svg>
+  <div class="stamp" id="stampA">1526</div>
+  <img class="cut" id="tyndale" src="assets/tyndale.png" alt="">
+  <div class="tag" id="tagA">WILLIAM TYNDALE</div>
+  <div id="headA"><span>The</span> <span>New</span> <span>Testament,</span> <span>in</span> <span id="kw">English.</span></div>
+  <svg id="markA" width="1920" height="1080"><path id="mA" d="M262 606 C 340 618, 470 616, 556 604" stroke="#B3261E" stroke-width="12" fill="none" stroke-linecap="round" opacity=".85"/></svg>
+  <div class="vig"></div>
+ </div>
+ <div class="layer clip" id="B" data-start="0" data-duration="12.8" data-track-index="1">
+  <img id="dock" src="assets/dock.png" alt="">
+  <div id="shadeB"></div>
+  <div id="labelB">SMUGGLED IN <b>BALES OF CLOTH</b></div>
+ </div>
+ <div class="layer clip" id="C" data-start="0" data-duration="12.8" data-track-index="2">
+  <div class="paperbg"></div>
+  <svg class="grain" width="1920" height="1080"><rect width="1920" height="1080" filter="url(#n)"/></svg>
+  <div id="headC"><span>It</span> <span>reached</span> <span>the</span> <span>plowboy.</span></div>
+  <div class="tag" id="tagC">ENGLAND · 1530s</div>
+  <img class="cut" id="plowboy" src="assets/plowboy.png" alt="">
+  <div class="vig"></div>
+ </div>
+ <div class="layer clip" id="D" data-start="0" data-duration="12.8" data-track-index="3">
+  <div id="lineD"><span>It</span> <span>cost</span> <span>him</span> <span>his</span> <span>life.</span></div>
+  <div class="stamp" id="stampD">1536</div>
+ </div>
+</div>
+<script>
+(function(){
+ const tl=gsap.timeline({paused:true});
+ gsap.set('#B',{yPercent:100}); gsap.set('#C',{xPercent:100}); gsap.set('#D',{opacity:0});
+ const mA=document.getElementById('mA'),LA=mA.getTotalLength();gsap.set(mA,{strokeDasharray:LA,strokeDashoffset:LA});
+ // A: "In 1526" (0.19) stamp; "William Tyndale" (1.94) portrait + tag; "printed the New Testament in English" (3.17) headline
+ tl.fromTo('#A',{scale:1.04},{scale:1,duration:6,ease:'sine.out'},0);
+ tl.fromTo('#stampA',{opacity:0,scale:2.4,rotation:-16},{opacity:.95,scale:1,rotation:-6,duration:.28,ease:'power4.in'},.3);
+ tl.fromTo('#tyndale',{opacity:0,y:-90,rotation:6},{opacity:1,y:0,rotation:1.5,duration:.5,ease:'back.out(1.5)'},1.85);
+ tl.fromTo('#tagA',{opacity:0,y:12},{opacity:1,y:0,duration:.3},2.35);
+ [3.17,3.45,3.75,4.35,4.55].forEach((t,i)=>tl.fromTo(`#headA span:nth-child(${i+1})`,{opacity:0,y:34},{opacity:1,y:0,duration:.4,ease:'power3.out'},t));
+ tl.fromTo(mA,{strokeDashoffset:LA},{strokeDashoffset:0,duration:.45,ease:'power2.out'},4.75);
+ // B: "Smuggled into England in bales of cloth" (5.91): the film still rises over the paper, slow push
+ tl.to('#B',{yPercent:0,duration:.55,ease:'power3.inOut'},5.45);
+ tl.to('#A',{yPercent:-25,duration:.55,ease:'power3.inOut'},5.45);
+ tl.fromTo('#dock',{scale:1},{scale:1.14,duration:3.4,ease:'none'},5.45);
+ tl.fromTo('#labelB',{opacity:0,x:-30},{opacity:1,x:0,duration:.4,ease:'power3.out'},6.9);
+ // C: "it reached the plowboy" (8.73): paper slides in from the right
+ tl.to('#C',{xPercent:0,duration:.5,ease:'power3.inOut'},8.3);
+ tl.to('#B',{xPercent:-30,duration:.5,ease:'power3.inOut'},8.3);
+ tl.fromTo('#plowboy',{opacity:0,y:-90,rotation:-6},{opacity:1,y:0,rotation:-1.5,duration:.5,ease:'back.out(1.5)'},8.6);
+ [8.75,8.95,9.3,9.45].forEach((t,i)=>tl.fromTo(`#headC span:nth-child(${i+1})`,{opacity:0,y:34},{opacity:1,y:0,duration:.4,ease:'power3.out'},t));
+ tl.fromTo('#tagC',{opacity:0,y:12},{opacity:1,y:0,duration:.3},9.7);
+ tl.fromTo('#C',{scale:1},{scale:1.03,duration:2,ease:'sine.inOut'},8.8);
+ // D: "It cost him his life." (10.70): cut to dark, words land, 1536 stamp
+ tl.to('#D',{opacity:1,duration:.35,ease:'power1.in'},10.35);
+ [10.7,10.9,11.15,11.35,11.55].forEach((t,i)=>tl.fromTo(`#lineD span:nth-child(${i+1})`,{opacity:0,y:20,filter:'blur(6px)'},{opacity:1,y:0,filter:'blur(0px)',duration:.4,ease:'power2.out'},t));
+ tl.fromTo('#stampD',{opacity:0,scale:2.4,rotation:-16},{opacity:.95,scale:1,rotation:-6,duration:.28,ease:'power4.in'},11.95);
+ tl.to({}, {duration:.001}, 12.799);
+ window.__timelines=window.__timelines||{};window.__timelines["main"]=tl;tl.seek(0);
+})();
+</script>
+</body></html>

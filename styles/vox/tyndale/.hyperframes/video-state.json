@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "historyId": "3f1dc162-ffd0-4efa-b5e9-36d6a4a46dce",
+  "currentRevision": "7d05f101-9af0-4f56-b0e9-36fb8185effb",
+  "pendingChanges": false,
+  "files": {
+    "assets/Fraunces.ttf": {
+      "hash": "177ff6c0f14e5550a3c624247cd1189611d4eb65d000b14944c63d967958abbb",
+      "content": "/root/.cache/hyperframes/history/3f1dc162-ffd0-4efa-b5e9-36d6a4a46dce/blobs/17/177ff6c0f14e5550a3c624247cd1189611d4eb65d000b14944c63d967958abbb"
+    },
+    "assets/Helvetica-Bold.ttf": {
+      "hash": "b9c6a623d515b01b2918c2a3edc577fef6bcabc0669230b218aa4b3ce337806b",
+      "content": "/root/.cache/hyperframes/history/3f1dc162-ffd0-4efa-b5e9-36d6a4a46dce/blobs/b9/b9c6a623d515b01b2918c2a3edc577fef6bcabc0669230b218aa4b3ce337806b"
+    },
+    "assets/Mono.ttf": {
+      "hash": "c805f9436dbc268644c1d9584f01a601a653e028e08fd74b9b949f6cf8304d88",
+      "content": "/root/.cache/hyperframes/history/3f1dc162-ffd0-4efa-b5e9-36d6a4a46dce/blobs/c8/c805f9436dbc268644c1d9584f01a601a653e028e08fd74b9b949f6cf8304d88"
+    },
+    "assets/gsap.min.js": {
+      "hash": "92bb9a96476f983d212a2bc4f54c889039c1696dd4461d40a736860938570fbb",
+      "content": "/root/.cache/hyperframes/history/3f1dc162-ffd0-4efa-b5e9-36d6a4a46dce/blobs/92/92bb9a96476f983d212a2bc4f54c889039c1696dd4461d40a736860938570fbb"
+    },
+    "hyperframes.json": {
+      "hash": "f6abeb3ddfea6dd5b008fe37086cdfe82af00cdb5346be6422408d9e73708442",
+      "content": "/root/.cache/hyperframes/history/3f1dc162-ffd0-4efa-b5e9-36d6a4a46dce/blobs/f6/f6abeb3ddfea6dd5b008fe37086cdfe82af00cdb5346be6422408d9e73708442"
+    },
+    "index.html": {
+      "hash": "9a52b822ef926faa1d643a4c884570b7bc67ccaf879018a80cfaba3284076b29",
+      "content": "/root/.cache/hyperframes/history/3f1dc162-ffd0-4efa-b5e9-36d6a4a46dce/blobs/9a/9a52b822ef926faa1d643a4c884570b7bc67ccaf879018a80cfaba3284076b29"
+    },
+    "assets/dock.png": {
+      "hash": "830d5905f3822752fa27065a6d1ce8d48e44b3c161fabd70bd9b312c22a70b32",
+      "content": "/root/.cache/hyperframes/history/3f1dc162-ffd0-4efa-b5e9-36d6a4a46dce/blobs/83/830d5905f3822752fa27065a6d1ce8d48e44b3c161fabd70bd9b312c22a70b32"
+    },
+    "assets/plowboy.png": {
+      "hash": "5908bf97c4f07c802500003d101c0b79339e8d22381419628436777fe6763728",
+      "content": "/root/.cache/hyperframes/history/3f1dc162-ffd0-4efa-b5e9-36d6a4a46dce/blobs/59/5908bf97c4f07c802500003d101c0b79339e8d22381419628436777fe6763728"
+    },
+    "assets/tyndale.png": {
+      "hash": "466fa9eb755e0fce3c1e2f68e510583804a0717a2dc204c919c34553b5835fa4",
+      "content": "/root/.cache/hyperframes/history/3f1dc162-ffd0-4efa-b5e9-36d6a4a46dce/blobs/46/466fa9eb755e0fce3c1e2f68e510583804a0717a2dc204c919c34553b5835fa4"
+    },
+    "vo.wav": {
+      "hash": "029647bcc4a7b5b25a1429c2d0d31b4618ddf4f1a4ff2ac8457cb3ef3634e650",
+      "content": "/root/.cache/hyperframes/history/3f1dc162-ffd0-4efa-b5e9-36d6a4a46dce/blobs/02/029647bcc4a7b5b25a1429c2d0d31b4618ddf4f1a4ff2ac8457cb3ef3634e650"
+    },
+    "out/check.jpg": {
+      "hash": "186fa80a2e4536fe0f11a6f968a83d84e482a03cc8566a0277e3a90fc42dd6a2",
+      "content": "/root/.cache/hyperframes/history/3f1dc162-ffd0-4efa-b5e9-36d6a4a46dce/blobs/18/186fa80a2e4536fe0f11a6f968a83d84e482a03cc8566a0277e3a90fc42dd6a2"
+    }
+  },
+  "revisions": {
+    "7d05f101-9af0-4f56-b0e9-36fb8185effb": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1795402541226,
+      "endedAt": 1795402541234,
+      "files": {
+        "index.html": {
+          "before": "/root/.cache/hyperframes/history/3f1dc162-ffd0-4efa-b5e9-36d6a4a46dce/blobs/ee/ee8207e45c2e6c5f8c7f1ce1c8b52433c6061d608d1bbfba7755d3df17249877",
+          "after": "/root/.cache/hyperframes/history/3f1dc162-ffd0-4efa-b5e9-36d6a4a46dce/blobs/9a/9a52b822ef926faa1d643a4c884570b7bc67ccaf879018a80cfaba3284076b29"
+        },
+        "out/check.jpg": {
+          "before": null,
+          "after": "/root/.cache/hyperframes/history/3f1dc162-ffd0-4efa-b5e9-36d6a4a46dce/blobs/18/186fa80a2e4536fe0f11a6f968a83d84e482a03cc8566a0277e3a90fc42dd6a2"
+        }
+      }
+    }
+  },
+  "checks": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "snapshots": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "renders": {
+    "latest": {
+      "id": "2a43379e-d9e4-4b10-b475-4e4171c885fe",
+      "completedAt": 1795402602979,
+      "output": "/home/user/miracle-core/styles/vox/tyndale/out/scene.mp4",
+      "status": "completed",
+      "revision": "7d05f101-9af0-4f56-b0e9-36fb8185effb"
+    },
+    "retainedRevisions": [
+      "7d05f101-9af0-4f56-b0e9-36fb8185effb"
+    ]
+  },
+  "pendingArtifactCleanup": []
+}
