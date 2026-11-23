@@ -1,0 +1,89 @@
+<!doctype html>
+<!--
+  Vox archival style, Higgsfield test: AI-generated pictures in a coded scene.
+  Pictures (Higgsfield, gpt_image_2_6): shop.png (B&W film still), portrait.png and press.png (engravings, background removed).
+  1920x1080, 9s, 30fps. No network, randomness or clock in the page.
+-->
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=1920, height=1080">
+<script src="assets/gsap.min.js"></script>
+<style>
+@font-face{font-family:'Serif';src:url(assets/Fraunces.ttf) format('truetype');}
+@font-face{font-family:'Sans';src:url(assets/Helvetica-Bold.ttf) format('truetype');}
+@font-face{font-family:'Mono';src:url(assets/Mono.ttf) format('truetype');}
+:root{--paper:#EFE5CF;--ink:#1E1A16;--brown:#6B5A45;--red:#B3261E;--cream:#FFF7DE}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#000}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;background:#000}
+/* shot 1: the film still */
+#film{position:absolute;inset:0;overflow:hidden}
+#film img{position:absolute;left:-40px;top:-22px;width:2000px;height:1120px;object-fit:cover;filter:grayscale(1) contrast(1.08) brightness(.92);transform-origin:62% 45%}
+#film .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.25) 45%,transparent 70%)}
+.stamp{position:absolute;padding:12px 24px;border:5px solid var(--red);color:var(--red);font:700 40px 'Mono';letter-spacing:6px;transform:rotate(-6deg);opacity:0}
+.stamp::after{content:"";position:absolute;inset:4px;border:2px solid var(--red)}
+#stamp1{left:120px;top:150px;background:rgba(239,229,207,.92)}
+#line1{position:absolute;left:124px;top:300px;width:900px;font:600 84px/1.06 'Serif';color:#F6EEDC;letter-spacing:-1.5px}
+#line1 span{display:inline-block;opacity:0}
+/* shot 2: the paper board */
+#board{position:absolute;inset:0;background:radial-gradient(ellipse at 30% 40%,rgba(255,250,235,.6),transparent 60%),radial-gradient(ellipse at 75% 70%,rgba(160,130,90,.2),transparent 55%),var(--paper);transform:translateY(1080px)}
+.grain{position:absolute;inset:0;opacity:.38;mix-blend-mode:multiply}
+#head{position:absolute;left:0;right:0;top:80px;text-align:center;font:600 96px/1 'Serif';color:var(--ink);letter-spacing:-2px}
+#head span{display:inline-block;opacity:0}
+.cut{position:absolute;filter:sepia(.3) contrast(1.05) drop-shadow(0 14px 18px rgba(50,30,10,.28))}
+#portrait{left:170px;top:250px;width:700px;opacity:0}
+#press{left:1050px;top:240px;width:720px;opacity:0}
+#plus{position:absolute;left:910px;top:520px;font:700 120px 'Sans';color:var(--red);opacity:0}
+.tag{position:absolute;background:var(--cream);padding:10px 18px;font:700 24px 'Mono';letter-spacing:3px;color:var(--ink);box-shadow:0 6px 12px rgba(0,0,0,.15);opacity:0}
+#tag1{left:300px;top:900px;transform:rotate(-2deg)}
+#mark{position:absolute;left:0;top:0;overflow:visible}
+#note{position:absolute;left:1450px;top:205px;font:700 26px 'Mono';letter-spacing:3px;color:var(--red);opacity:0;white-space:nowrap}
+.vig{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 50%,transparent 55%,rgba(60,40,20,.38) 100%)}
+</style></head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="9" data-width="1920" data-height="1080" data-fps="30">
+ <div id="film" class="clip" data-start="0" data-duration="9" data-track-index="0">
+  <img src="assets/shop.png" alt="">
+  <div class="shade"></div>
+  <div class="stamp" id="stamp1">MAINZ · c.1455</div>
+  <div id="line1"><span>One</span> <span>workshop</span> <span>put</span> <span>Scripture</span> <span>in</span> <span>print.</span></div>
+ </div>
+ <div id="board" class="clip" data-start="0" data-duration="9" data-track-index="1">
+  <svg class="grain" width="1920" height="1080"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".7" numOctaves="4" seed="7"/><feColorMatrix values="0 0 0 0 .35  0 0 0 0 .27  0 0 0 0 .18  0 0 0 .9 0"/></filter><rect width="1920" height="1080" filter="url(#n)"/></svg>
+  <div id="head"><span>One</span> <span>man.</span> <span>One</span> <span>machine.</span></div>
+  <img class="cut" id="portrait" src="assets/portrait.png" alt="">
+  <div id="plus">+</div>
+  <img class="cut" id="press" src="assets/press.png" alt="">
+  <div class="tag" id="tag1">JOHANNES GUTENBERG</div>
+  <svg id="mark" width="1920" height="1080"><path id="markp" d="M1130 330 C 1200 240, 1560 230, 1700 300 C 1830 370, 1790 520, 1640 560 C 1450 610, 1200 570, 1140 470 C 1100 400, 1140 330, 1260 300" stroke="#B3261E" stroke-width="6" fill="none" stroke-linecap="round"/><path id="connp" d="M1600 262 C 1590 245, 1560 238, 1540 240" stroke="#B3261E" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
+  <div id="note">THE SCREW PRESS</div>
+  <div class="vig"></div>
+ </div>
+</div>
+<script>
+(function(){
+ const tl=gsap.timeline({paused:true});
+ const mk=document.getElementById('markp'),mL=mk.getTotalLength();gsap.set(mk,{strokeDasharray:mL,strokeDashoffset:mL});
+ const cn=document.getElementById('connp'),cL=cn.getTotalLength();gsap.set(cn,{strokeDasharray:cL,strokeDashoffset:cL});
+ // shot 1: slow push on the film still, stamp, line
+ tl.fromTo('#film img',{scale:1.0},{scale:1.12,duration:3.8,ease:'none'},0);
+ tl.fromTo('#stamp1',{opacity:0,scale:2.2,rotation:-14},{opacity:.95,scale:1,rotation:-6,duration:.28,ease:'power4.in'},.4);
+ tl.fromTo('#line1 span',{opacity:0,y:30,filter:'blur(6px)'},{opacity:1,y:0,filter:'blur(0px)',duration:.45,ease:'power3.out',stagger:.16},.95);
+ // 3.3: paper slides up over the film
+ tl.to('#board',{y:0,duration:.6,ease:'power3.inOut'},3.3);
+ tl.to('#film img',{y:-200,duration:.6,ease:'power3.inOut'},3.3);
+ // shot 2: headline, the two cutouts land, the plus, the tag
+ tl.fromTo('#head span',{opacity:0,y:30},{opacity:1,y:0,duration:.4,ease:'power3.out',stagger:.14},3.85);
+ tl.fromTo('#portrait',{opacity:0,y:-80,rotation:-7},{opacity:1,y:0,rotation:-2,duration:.5,ease:'back.out(1.5)'},4.1);
+ tl.fromTo('#plus',{opacity:0,scale:0},{opacity:1,scale:1,duration:.3,ease:'back.out(2.5)'},4.55);
+ tl.fromTo('#press',{opacity:0,y:-80,rotation:6},{opacity:1,y:0,rotation:1.5,duration:.5,ease:'back.out(1.5)'},4.75);
+ tl.fromTo('#tag1',{opacity:0,y:12},{opacity:1,y:0,duration:.3},5.2);
+ // 5.7: marker circles the press, connector and note in one beat
+ tl.fromTo(mk,{strokeDashoffset:mL},{strokeDashoffset:0,duration:.7,ease:'power2.inOut'},5.7);
+ tl.fromTo(cn,{strokeDashoffset:cL},{strokeDashoffset:0,duration:.25},6.3);
+ tl.fromTo('#note',{opacity:0,y:8},{opacity:1,y:0,duration:.3},6.45);
+ // hold with a slow push
+ tl.fromTo('#board',{scale:1},{scale:1.03,duration:5,ease:'sine.inOut'},3.9);
+ tl.to({}, {duration:.001}, 8.999);
+ window.__timelines=window.__timelines||{};window.__timelines["main"]=tl;tl.seek(0);
+})();
+</script>
+</body></html>
